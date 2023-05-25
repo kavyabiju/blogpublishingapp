@@ -1,0 +1,98 @@
+/* Style for profile card container */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+/* Style for profile card */
+.profile-card {
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+ 
+ 
+}
+
+/* Style for cover picture */
+.cover-pic {
+  
+  display: block;
+  width: 100%;
+  max-width: 100%;
+ 
+}
+
+/* Style for profile picture */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -75px;
+  border: 5px solid #ffffff;
+}
+
+/* Style for name */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+/* Style for username */
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #707070;
+  margin: 0;
+}
+
+/* Style for edit button */
+.follow-btn {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.follow-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Style for blogs section */
+.row {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #707070;
+  margin: 0;
+}

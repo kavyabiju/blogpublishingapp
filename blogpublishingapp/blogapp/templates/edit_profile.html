@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Edit profile</title>
+		<link rel="stylesheet" href="{% static './style/css/edit_profile.css' %}">
+		</head>
+		<body>
+			<!-- {% for i in user %} -->
+			<div class="container">
+				<div class="profile-card">
+					<img src="static/style/images/back2.png" class="cover-pic">
+					<img src="../media/{{i.profile_pic}}" class="profile-pic">
+					
+                    <form method="post"  enctype="multipart/form-data" action="{% url 'edit_profile' %}" >
+                        
+                        {% csrf_token %}
+                       <input type="text"  placeholder="Enter name" name="name" value="{{i.name}}"><br>
+                       <input type="text"  placeholder="Enter email" name="username" value="{{i.username}}"><br>
+					   {% if i.profile_pic %}
+					   <input type="file" name="profile_pic" class="form-control-file" accept="image/*" >
+			
+				   		{% else %}
+					   <input type="file" name="profile_pic" class="form-control-file" accept="image/*">
+				   		{% endif %}
+				   
+                       <!-- <a href="{%  url 'edit_profile'  %}" class="btn btn-success">Update</a> -->
+                       <button type="submit">Update</button>
+                    </form>
+					<!-- <a href="{%  url 'edit_profile'  %}" class="btn btn-success">Update</a> -->
+					
+
+				</div>
+				<!-- {% endfor %} -->
+                
+			</div>
+		</body>
+	</html>
